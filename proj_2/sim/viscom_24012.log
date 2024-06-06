@@ -1,0 +1,4 @@
+** Error (suppressible): (vopt-13276) ../../../verification_ip/interface_packages/environment_packages/i2cmb_env_pkg/src/i2cmb_test.svh(16): Could not find field/method name (set_agent) in 'gen' of 'gen.set_agent'.
+** Error (suppressible): (vopt-13276) ../../../verification_ip/interface_packages/environment_packages/i2cmb_env_pkg/src/i2cmb_test.svh(16): Could not find field/method name (set_agent) in 'gen' of 'gen.set_agent.$0'.
+** Error (suppressible): (vopt-13276) ../../../verification_ip/interface_packages/environment_packages/i2cmb_env_pkg/src/i2cmb_test.svh(16): Could not find field/method name (set_agent) in 'gen' of 'gen.set_agent.$0'.
+Optimization failed

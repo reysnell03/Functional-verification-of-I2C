@@ -1,0 +1,165 @@
+# Current time Sun Feb 25 00:10:20 2024
+# Program = hdlclient
+# Id = "2023.4"
+# Version = "2023.10"
+# Date = "Oct  9 2023"
+# Platform = "linux_x86_64"
+# Signature = d301f6555e991deabc38b1d9587f059f
+# lib_addresses = libpthread.so.0=0x00007ffff2e12000,libQt5Core.so.5=0x00007ffff6406000
+# End of Stack Trace
+
+#  0 0x00007ffff2e1da35 '<unknown (@0x7ffff2e1da35)>'
+#  1 0x00007ffff64dda43 '<unknown (@0x7ffff64dda43)>'
+#  2 0x0000000001b96a3a '<unknown (@0x1b96a3a)>'
+#  3 0x00007ffff64d6f4d '<unknown (@0x7ffff64d6f4d)>'
+# Current time Sun Feb 25 00:34:07 2024
+# Program = hdlclient
+# Id = "2023.4"
+# Version = "2023.10"
+# Date = "Oct  9 2023"
+# Platform = "linux_x86_64"
+# Signature = d301f6555e991deabc38b1d9587f059f
+# lib_addresses = libc.so.6=0x00007ffff2742000,libQt5Core.so.5=0x00007ffff6406000,libQt5XcbQpa.so.5=0x00007ffff4021000,libQt5Widgets.so.5=0x00007ffff430b000,libQt5Gui.so.5=0x00007ffff55f0000
+# End of Stack Trace
+
+#  0 0x00007ffff2835e9f '<unknown (@0x7ffff2835e9f)>'
+#  1 0x00007ffff6724640 '<unknown (@0x7ffff6724640)>'
+#  2 0x00007ffff6725ccd '<unknown (@0x7ffff6725ccd)>'
+#  3 0x00007ffff407ef2e '<unknown (@0x7ffff407ef2e)>'
+#  4 0x00007ffff66cba2a '<unknown (@0x7ffff66cba2a)>'
+#  5 0x0000000001c39347 '<unknown (@0x1c39347)>'
+#  6 0x000000000298d9ab '<unknown (@0x298d9ab)>'
+#  7 0x000000000294ec9c '<unknown (@0x294ec9c)>'
+#  8 0x0000000002913f26 '<unknown (@0x2913f26)>'
+#  9 0x00000000028968e7 '<unknown (@0x28968e7)>'
+# 10 0x0000000002897ff1 '<unknown (@0x2897ff1)>'
+# 11 0x0000000002898336 '<unknown (@0x2898336)>'
+# 12 0x000000000289835d '<unknown (@0x289835d)>'
+# 13 0x000000000289870b '<unknown (@0x289870b)>'
+# 14 0x0000000000f74921 '<unknown (@0xf74921)>'
+# 15 0x0000000000f7972c '<unknown (@0xf7972c)>'
+# 16 0x0000000000b3b2df '<unknown (@0xb3b2df)>'
+# 17 0x0000000000b3ba31 '<unknown (@0xb3ba31)>'
+# 18 0x0000000000b6fc1b '<unknown (@0xb6fc1b)>'
+# 19 0x00007ffff44cde70 '<unknown (@0x7ffff44cde70)>'
+# 20 0x00007ffff45d50a1 '<unknown (@0x7ffff45d50a1)>'
+# 21 0x00007ffff449187c '<unknown (@0x7ffff449187c)>'
+# 22 0x00007ffff4498340 '<unknown (@0x7ffff4498340)>'
+# 23 0x00007ffff66cd038 '<unknown (@0x7ffff66cd038)>'
+# 24 0x00007ffff44c9605 '<unknown (@0x7ffff44c9605)>'
+# 25 0x00007ffff44e6a56 '<unknown (@0x7ffff44e6a56)>'
+# 26 0x00007ffff44ea2c6 '<unknown (@0x7ffff44ea2c6)>'
+# 27 0x00007ffff449187c '<unknown (@0x7ffff449187c)>'
+# 28 0x00007ffff4498340 '<unknown (@0x7ffff4498340)>'
+# 29 0x00007ffff66cd038 '<unknown (@0x7ffff66cd038)>'
+# 30 0x00007ffff5754380 '<unknown (@0x7ffff5754380)>'
+# 31 0x00007ffff5758525 '<unknown (@0x7ffff5758525)>'
+# 32 0x00007ffff573416b '<unknown (@0x7ffff573416b)>'
+# 33 0x00007ffff407ef43 '<unknown (@0x7ffff407ef43)>'
+# 34 0x00007ffff66cba2a '<unknown (@0x7ffff66cba2a)>'
+# 35 0x0000000001c39347 '<unknown (@0x1c39347)>'
+# 36 0x000000000298d9ab '<unknown (@0x298d9ab)>'
+# 37 0x000000000294ec9c '<unknown (@0x294ec9c)>'
+# 38 0x0000000002913f26 '<unknown (@0x2913f26)>'
+# 39 0x00000000028968e7 '<unknown (@0x28968e7)>'
+# 40 0x0000000002897ff1 '<unknown (@0x2897ff1)>'
+# 41 0x0000000002898336 '<unknown (@0x2898336)>'
+# 42 0x0000000000f7f9c8 '<unknown (@0xf7f9c8)>'
+# 43 0x0000000000f7ff95 '<unknown (@0xf7ff95)>'
+# 44 0x00000000010c1c30 '<unknown (@0x10c1c30)>'
+# 45 0x00007ffff670556f '<unknown (@0x7ffff670556f)>'
+# 46 0x00007ffff448ba92 '<unknown (@0x7ffff448ba92)>'
+# 47 0x00007ffff448de9e '<unknown (@0x7ffff448de9e)>'
+# 48 0x00007ffff457b6c8 '<unknown (@0x7ffff457b6c8)>'
+# 49 0x00007ffff457b7e5 '<unknown (@0x7ffff457b7e5)>'
+# 50 0x00007ffff465f63a '<unknown (@0x7ffff465f63a)>'
+# 51 0x00007ffff44cde70 '<unknown (@0x7ffff44cde70)>'
+# 52 0x00007ffff465f709 '<unknown (@0x7ffff465f709)>'
+# 53 0x00007ffff449187c '<unknown (@0x7ffff449187c)>'
+# 54 0x00007ffff4498f88 '<unknown (@0x7ffff4498f88)>'
+# 55 0x00007ffff66cd038 '<unknown (@0x7ffff66cd038)>'
+# 56 0x00007ffff449795a '<unknown (@0x7ffff449795a)>'
+# 57 0x00007ffff44e75b3 '<unknown (@0x7ffff44e75b3)>'
+# 58 0x00007ffff44ea363 '<unknown (@0x7ffff44ea363)>'
+# 59 0x00007ffff449187c '<unknown (@0x7ffff449187c)>'
+# 60 0x00007ffff4498340 '<unknown (@0x7ffff4498340)>'
+# 61 0x00007ffff66cd038 '<unknown (@0x7ffff66cd038)>'
+# 62 0x00007ffff57570f5 '<unknown (@0x7ffff57570f5)>'
+# 63 0x00007ffff57584f5 '<unknown (@0x7ffff57584f5)>'
+# 64 0x00007ffff573416b '<unknown (@0x7ffff573416b)>'
+# 65 0x00007ffff407ef43 '<unknown (@0x7ffff407ef43)>'
+# 66 0x00007ffff66cba2a '<unknown (@0x7ffff66cba2a)>'
+# 67 0x0000000001c39347 '<unknown (@0x1c39347)>'
+# 68 0x000000000298d9ab '<unknown (@0x298d9ab)>'
+# 69 0x000000000294ec9c '<unknown (@0x294ec9c)>'
+# Current time Thu Mar 21 22:55:32 2024
+# Program = hdlclient
+# Id = "2023.4"
+# Version = "2023.10"
+# Date = "Oct  9 2023"
+# Platform = "linux_x86_64"
+# Signature = d301f6555e991deabc38b1d9587f059f
+# lib_addresses = libc.so.6=0x00007ffff2742000,libxcb.so.1=0x00007ffff0a00000,libQt5XcbQpa.so.5=0x00007ffff4021000,libQt5Core.so.5=0x00007ffff6406000
+# End of Stack Trace
+
+#  0 0x00007ffff2835ddd '<unknown (@0x7ffff2835ddd)>'
+#  1 0x00007ffff0a0be22 '<unknown (@0x7ffff0a0be22)>'
+#  2 0x00007ffff0a0d957 '<unknown (@0x7ffff0a0d957)>'
+#  3 0x00007ffff407de80 '<unknown (@0x7ffff407de80)>'
+#  4 0x00007ffff64d6f4d '<unknown (@0x7ffff64d6f4d)>'
+
+#GUI stackframe at time of fault
+Thread 2 (Thread 0x7fffe8bcb700 (LWP 22764)):
+#0  0x00007ffff2807659 in waitpid () from /lib64/libc.so.6
+#1  0x00007ffff2784f62 in do_system () from /lib64/libc.so.6
+#2  0x00007ffff2785311 in system () from /lib64/libc.so.6
+#3  0x0000000001c48096 in gPrintStackTraceThread(int, char const*) ()
+#4  0x0000000001597332 in sig_handler(int, siginfo_t*, void*) ()
+#5  <signal handler called>
+#6  0x00007ffff2835ddd in poll () from /lib64/libc.so.6
+#7  0x00007ffff0a0be22 in _xcb_conn_wait (c=c@entry=0x4671fd0, cond=cond@entry=0x4672010, vector=vector@entry=0x0, count=count@entry=0x0) at /u/prod_dev/xcb/libxcb-1.13/src/xcb_conn.c:479
+#8  0x00007ffff0a0d957 in xcb_wait_for_event (c=0x4671fd0) at /u/prod_dev/xcb/libxcb-1.13/src/xcb_in.c:697
+#9  0x00007ffff407de80 in QXcbEventQueue::run() () from /mnt/apps/public/COE/mg_apps/questa2023.4/questasim/linux_x86_64/VisualizerRls/bin/libQt5XcbQpa.so.5
+#10 0x00007ffff64d6f4d in QThreadPrivate::start(void*) () from /mnt/apps/public/COE/mg_apps/questa2023.4/questasim/linux_x86_64/VisualizerRls/bin/libQt5Core.so.5
+#11 0x00007ffff2e19ea5 in start_thread () from /lib64/libpthread.so.0
+#12 0x00007ffff2840b0d in clone () from /lib64/libc.so.6
+Thread 1 (Thread 0x7ffff7fc6840 (LWP 22749)):
+#0  0x00007ffff2e207bd in close () from /lib64/libpthread.so.0
+#1  0x00000000029847d7 in ?? ()
+#2  0x0000000002933765 in ?? ()
+#3  0x0000000002932f3f in Tcl_Close ()
+#4  0x000000000293381d in ?? ()
+#5  0x0000000002932f3f in Tcl_Close ()
+#6  0x0000000002942ed0 in ?? ()
+#7  0x00000000028ad4ac in ?? ()
+#8  0x00000000028968e7 in TclNRRunCallbacks ()
+#9  0x0000000002897ff1 in ?? ()
+#10 0x0000000002898336 in Tcl_EvalEx ()
+#11 0x000000000295a512 in ?? ()
+#12 0x000000000295ad89 in Tcl_PkgRequireProc ()
+#13 0x000000000295b57f in ?? ()
+#14 0x00000000028968e7 in TclNRRunCallbacks ()
+#15 0x0000000002897ff1 in ?? ()
+#16 0x0000000002898336 in Tcl_EvalEx ()
+#17 0x000000000295a68a in ?? ()
+#18 0x000000000295ad89 in Tcl_PkgRequireProc ()
+#19 0x000000000295b57f in ?? ()
+#20 0x00000000028968e7 in TclNRRunCallbacks ()
+#21 0x0000000002897ff1 in ?? ()
+#22 0x0000000002898336 in Tcl_EvalEx ()
+#23 0x000000000289835d in Tcl_Eval ()
+#24 0x0000000000b5fbd5 in ?? ()
+#25 0x000000000289262d in TclInvokeStringCommand ()
+#26 0x00000000028968e7 in TclNRRunCallbacks ()
+#27 0x0000000002897ff1 in ?? ()
+#28 0x0000000002898336 in Tcl_EvalEx ()
+#29 0x000000000295a68a in ?? ()
+#30 0x000000000295ad89 in Tcl_PkgRequireProc ()
+#31 0x000000000295b57f in ?? ()
+#32 0x00000000028968e7 in TclNRRunCallbacks ()
+#33 0x0000000000b45813 in cmdLine::mGetDUFromArgs(QStringList const&, QString&, QStringList&, QString&) ()
+#34 0x0000000000b47311 in cmdLine::mProcessLiveSimArguments(QStringList const&, QStringList*, bool) ()
+#35 0x0000000000b36f98 in hdlstudioCls::_mStartup_ProcessVsimArguments(QStringList const&, QStringList&, bool&) ()
+#36 0x0000000000b3ec25 in hdlstudioCls::_mStartupInVsim(QStringList const&) ()
+#37 0x0000000000b43065 in hdlstudioCls::mInit() ()
+#38 0x0000000000a727df in main ()

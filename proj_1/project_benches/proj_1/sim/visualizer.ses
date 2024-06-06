@@ -1,0 +1,132 @@
+<!-- THIS IS TOOL GENERATED SESSION FILE. PLEASE DO NOT MODIFY THIS -->
+<!DOCTYPE visualizer_session>
+<session skip_do_file="0" version="3">
+ <app argc="5">
+  <argv value="vsim" pos="0"/>
+  <argv value="design.bin" pos="1"/>
+  <argv value="-do" pos="2"/>
+  <argv value="set IterationLimit 140000; set NoQuitOnFinish 1; coverage attribute -name TESTNAME -value test_top; coverage save -onexit test_top.ucdb; do wave.do" pos="3"/>
+  <argv value="+_sv_debug_+vsim-64-onfinishstop-classdebug-uvmcontrol=all-msgmodeboth-permit_unmatched_virtual_intf-sv_seed123456-msglimiterror-msglimitcount20-qwavedb=+signal+memory=1024+report+parameter+class+assertion+uvm_schematic+msg+classmemory=1024+statictaskfunc-libqrun.out/work-visualizer=design.bin-statslogqrun.out/stats_logqrun_opt-appendlog-csession=incr-csessionid=3" pos="4"/>
+ </app>
+ <window_config>
+  <dockareas top="0" bottom="189" right="450" left="204"/>
+  <taborder bottom="transcript+" left="files+structure+testbench+"/>
+  <activetab bottom="transcript" left="structure"/>
+  <window x="0" type="files" dock_location="left" visible="1" undocked="0" y="0"/>
+  <window x="0" type="structure" dock_location="left" visible="1" undocked="0" y="0"/>
+  <window x="0" type="testbench" dock_location="left" visible="1" undocked="0" y="0"/>
+  <window x="0" type="transcript" dock_location="bottom" visible="1" undocked="0" y="0"/>
+  <window x="0" type="rtl" visible="1" width="1920" undocked="0" y="177" height="1009"/>
+  <window x="0" type="wave" dock_location="bottom" visible="1" width="1280" undocked="1" y="0" height="729"/>
+  <window x="0" type="source" dock_location="center" visible="0" firstVisibleLine="1" undocked="0" path="/mnt/ncsudrive/s/sreyya/745/project_2_provided_files/ece745_projects/proj_1/project_benches/proj_1/testbench/top.sv" y="0"/>
+  <window x="0" id="1" type="source" dock_location="center" visible="1" firstVisibleLine="53" undocked="0" path="/mnt/ncsudrive/s/sreyya/745/project_2_provided_files/ece745_projects/proj_1/verification_ip/interface_packages/wb_pkg/src/wb_if.sv" y="0"/>
+ </window_config>
+ <wave_file_mgr>
+  <waveFile tagName="sim" fileName="/mnt/ncsudrive/s/sreyya/745/project_2_provided_files/ece745_projects/proj_1/project_benches/proj_1/sim/qwave.db" waveType="0"/>
+ </wave_file_mgr>
+ <gui>
+  <main_window visible="1">
+   <srcbrowser filepath="/mnt/ncsudrive/s/sreyya/745/project_2_provided_files/ece745_projects/proj_1/project_benches/proj_1/testbench/top.sv" instancename="top"/>
+   <sourcetclcommands>
+    <tcl command="src activate source"/>
+    <tcl command="src top 2"/>
+   </sourcetclcommands>
+   <srcbrowser filepath="/mnt/ncsudrive/s/sreyya/745/project_2_provided_files/ece745_projects/proj_1/verification_ip/interface_packages/wb_pkg/src/wb_if.sv" primary="true" instancename="top.wb_bus"/>
+   <sourcetclcommands>
+    <tcl command="src activate source1"/>
+    <tcl command="src top 54"/>
+   </sourcetclcommands>
+   <edge_gui cur_selection="AnyEdge"/>
+  </main_window>
+  <watchTower_cur_setting curDisplayTimeUnit="-7" curActiveWaveFile="sim" customDisplayTimeUnitListStr="" curDisplayTimeUnitStr="100ns" curRadix="2">
+   <curTime hightime="0" lowtime="434847000"/>
+  </watchTower_cur_setting>
+  <files/>
+  <structure selection="top.wb_bus"/>
+  <testbench/>
+  <transcript/>
+  <wave name="Wave0">
+   <timeunit value="9"/>
+   <frequnit value="2"/>
+   <showdiff value="0"/>
+  </wave>
+ </gui>
+ <wave_mgr sync_time_range="0">
+  <waveWindow secNudge="1" displayGlobalView="1" displayTimeUnitStr="100ns" nameWidth="206" snapToEdge="1" showMarkers="1" displayFileTag="1" primNudge="1" swapRepresentationOfX="0" displayRadixWithValue="1" wintype="4" alignBaseName="0" displayTimeUnit="-7" waveWidth="929" displayLeadingZeros="0" value_tooltip="0" displayScopeName="1" signalHeight="18" displayGrid="0" justifySignalPath="Right" valueWidth="100" trackViewToTime="1" showSecCursor="1">
+   <window name="Wave0">
+    <timeunit value="9"/>
+    <frequnit value="2"/>
+    <showdiff value="0"/>
+   </window>
+   <viewPort>
+    <beginTime hightime="0" lowtime="0"/>
+    <endTime hightime="0" lowtime="434847000"/>
+    <beginViewTime hightime="0" lowtime="0"/>
+    <endViewTime hightime="0" lowtime="434847000"/>
+    <beginLastViewTime hightime="0" lowtime="0"/>
+    <endLastViewTime hightime="0" lowtime="434847000"/>
+   </viewPort>
+   <primCursor hightime="0" lowtime="434847000"/>
+   <secCursor hightime="0" lowtime="0"/>
+   <wavetclcommands>
+    <tcl command="onerror resume&#xa;wave update off&#xa;wave clearselection&#xa;"/>
+    <tcl commandblock="custom radix definitions"></tcl>
+    <tcl command="wave update off"/>
+    <tcl command="wave zoom range 0 434847000"/>
+    <tcl command="wave group top -backgroundcolor #004466"/>
+    <tcl command="wave add -group top top.WB_ADDR_WIDTH -tag sim -radix hexadecimal"/>
+    <tcl command="wave add -group top top.WB_DATA_WIDTH -tag sim -radix hexadecimal"/>
+    <tcl command="wave add -group top top.clk -tag sim -radix hexadecimal"/>
+    <tcl command="wave add -group top top.rst -tag sim -radix hexadecimal"/>
+    <tcl command="wave add -group top top.cyc -tag sim -radix hexadecimal"/>
+    <tcl command="wave add -group top top.stb -tag sim -radix hexadecimal"/>
+    <tcl command="wave add -group top top.we -tag sim -radix hexadecimal"/>
+    <tcl command="wave add -group top top.ack -tag sim -radix hexadecimal"/>
+    <tcl command="wave add -group top top.adr -tag sim -radix hexadecimal"/>
+    <tcl command="wave add -group top top.dat_wr_o -tag sim -radix hexadecimal"/>
+    <tcl command="wave add -group top top.dat_rd_i -tag sim -radix hexadecimal"/>
+    <tcl command="wave add -group top top.irq -tag sim -radix hexadecimal"/>
+    <tcl command="wave add -group top {top.scl[0]} -tag sim -radix hexadecimal"/>
+    <tcl command="wave insertion [expr [wave index insertpoint] + 1]"/>
+    <tcl command="wave group top.i2c_bus -backgroundcolor #004466"/>
+    <tcl command="wave add -group top.i2c_bus top.i2c_bus.i2c_DATA_WIDTH -tag sim -radix hexadecimal -select"/>
+    <tcl command="wave add -group top.i2c_bus top.i2c_bus.i2c_ADDR_WIDTH -tag sim -radix hexadecimal -select"/>
+    <tcl command="wave add -group top.i2c_bus top.i2c_bus.i2c_BUS -tag sim -radix hexadecimal -select"/>
+    <tcl command="wave add -group top.i2c_bus {top.i2c_bus.sda_input[0]} -tag sim -radix hexadecimal -select"/>
+    <tcl command="wave add -group top.i2c_bus {top.i2c_bus.scl_input[0]} -tag sim -radix hexadecimal -select"/>
+    <tcl command="wave add -group top.i2c_bus {top.i2c_bus.sda_output[0]} -tag sim -radix hexadecimal -select"/>
+    <tcl command="wave add -group top.i2c_bus {top.i2c_bus.scl_output[0]} -tag sim -radix hexadecimal -select"/>
+    <tcl command="wave add -group top.i2c_bus top.i2c_bus.Start -tag sim -radix hexadecimal -select"/>
+    <tcl command="wave add -group top.i2c_bus top.i2c_bus.Stop -tag sim -radix hexadecimal -select"/>
+    <tcl command="wave add -group top.i2c_bus top.i2c_bus.reg_adr -tag sim -radix hexadecimal -select"/>
+    <tcl command="wave add -group top.i2c_bus top.i2c_bus.reg_data -tag sim -radix hexadecimal -select"/>
+    <tcl command="wave add -group top.i2c_bus top.i2c_bus.read -tag sim -radix hexadecimal -select"/>
+    <tcl command="wave add -group top.i2c_bus top.i2c_bus.mdata_reg -tag sim -radix hexadecimal -select"/>
+    <tcl command="wave add -group top.i2c_bus top.i2c_bus.mread_reg -tag sim -radix hexadecimal -select"/>
+    <tcl command="wave add -group top.i2c_bus top.i2c_bus.temp -tag sim -radix hexadecimal -select"/>
+    <tcl command="wave add -group top.i2c_bus top.i2c_bus.control -tag sim -radix hexadecimal -select"/>
+    <tcl command="wave add -group top.i2c_bus top.i2c_bus.driver -tag sim -radix hexadecimal -select"/>
+    <tcl command="wave add -group top.i2c_bus top.i2c_bus.value -tag sim -radix hexadecimal -select"/>
+    <tcl command="wave add -group top.i2c_bus top.i2c_bus.i -tag sim -radix hexadecimal -select"/>
+    <tcl command="wave add -group top.i2c_bus top.i2c_bus.j -tag sim -radix hexadecimal -select"/>
+    <tcl command="wave add -group top.i2c_bus top.i2c_bus.k -tag sim -radix hexadecimal -select"/>
+    <tcl command="wave add -group top.i2c_bus top.i2c_bus.l -tag sim -radix hexadecimal -select"/>
+    <tcl command="wave add -group top.i2c_bus top.i2c_bus.m -tag sim -radix hexadecimal -select"/>
+    <tcl command="wave add -group top.i2c_bus top.i2c_bus.n -tag sim -radix hexadecimal -select"/>
+    <tcl command="wave add -group top.i2c_bus top.i2c_bus.size -tag sim -radix hexadecimal -select"/>
+    <tcl command="wave add -group top.i2c_bus top.i2c_bus.saddr -tag sim -radix hexadecimal -select"/>
+    <tcl command="wave add -group top.i2c_bus top.i2c_bus.wait_for_i2c_transfer.op -tag sim -radix hexadecimal -select"/>
+    <tcl command="wave add -group top.i2c_bus top.i2c_bus.provide_read_data.transfer_complete -tag sim -radix hexadecimal -select"/>
+    <tcl command="wave add -group top.i2c_bus top.i2c_bus.monitor.addr -tag sim -radix hexadecimal -select"/>
+    <tcl command="wave add -group top.i2c_bus top.i2c_bus.monitor.op -tag sim -radix hexadecimal -select"/>
+    <tcl command="wave insertion [expr [wave index insertpoint] + 1]"/>
+    <tcl command="wave update on"/>
+    <tcl command="wave top 0"/>
+    <tcl command=""/>
+   </wavetclcommands>
+  </waveWindow>
+ </wave_mgr>
+ <mem_mgr/>
+ <windows/>
+ <dut selection="top.wb_bus"/>
+</session>

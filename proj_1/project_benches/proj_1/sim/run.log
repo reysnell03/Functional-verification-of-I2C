@@ -1,0 +1,232 @@
+QuestaSim qrun 2023.4 Utility 2023.10 Oct  9 2023
+Start time: 15:25:48 on Mar 23,2024
+qrun -64 -gui -visualizer -onfinish stop -classdebug -uvmcontrol=all -msgmode both -permit_unmatched_virtual_intf -l run.log -f lab1_filelist.f -sv_seed 123456 -msglimit error -msglimitcount 20 -do "set IterationLimit 140000; set NoQuitOnFinish 1; coverage attribute -name TESTNAME -value test_top; coverage save -onexit test_top.ucdb; do wave.do" -debug,livesim -qwavedb=+signal+memory=1024+report+parameter+class+assertion+uvm_schematic+msg+classmemory=1024+statictaskfunc -top top -covermultiuserenv -designfile design.bin 
+-- Skipping 'vlog -64 -msglimit error -msglimitcount 20 -covermultiuseren...'
+-- Skipping 'vcom -64 -msglimit error -msglimitcount 20 -covermultiuseren...'
+-- Skipping vopt
+# VISUALIZERROOT = '/mnt/apps/public/COE/mg_apps/questa2023.4/questasim/linux_x86_64/VisualizerRls'
+# USER = 'sreyya'
+# Mentor Graphics software version 2023.4 (Build on Oct  9 2023)
+# Copyright (C) 1999-2024 by Mentor Graphics All rights reserved.
+
+# vsim -64 -onfinish stop -classdebug -uvmcontrol=all -msgmode both -permit_unmatched_virtual_intf -sv_seed 123456 -msglimit error -msglimitcount 20 -qwavedb=+signal+memory=1024+report+parameter+class+assertion+uvm_schematic+msg+classmemory=1024+statictaskfunc -lib qrun.out/work -visualizer=design.bin -do {set IterationLimit 140000; set NoQuitOnFinish 1; coverage attribute -name TESTNAME -value test_top; coverage save -onexit test_top.ucdb; do wave.do} -statslog qrun.out/stats_log qrun_opt -appendlog -l run.log -csession=incr -csessionid=3
+# vsim -64 -onfinish stop -classdebug -uvmcontrol=all -msgmode both -permit_unmatched_virtual_intf -sv_seed 123456 -msglimit error -msglimitcount 20 -qwavedb=+livesim+signal+memory=1024+report+parameter+class+assertion+uvm_schematic+msg+classmemory=1024+statictaskfunc -lib qrun.out/work -visualizer=design.bin -statslog qrun.out/stats_log qrun_opt -appendlog -csession=incr -csessionid=3 "+no_qwavedb_threading" 
+# Start time: 15:26:19 on Mar 23,2024
+# Loading Mentor Graphics Visualizer shared object '/mnt/apps/public/COE/mg_apps/questa2023.4/questasim/bin/../linux_x86_64/VisualizerRls/bin/libqvisualizer.so'
+
+# Initiating qwavedb class logging
+
+
+# Done initiating qwavedb class logging
+# qwavedb_dumpvars: Warning: detected qwavedb file <qwave.db>
+# 	may be in use since the lock file <qwave.db.lock>
+# 	exists. The file was created by sreyya@grendel29.ece.ncsu.edu, PID=18361 MAC=__no_mac_addr_available__
+# 	Automatically deleting the lock file and proceeding with simulation.
+# 
+# //  Questa Sim-64
+# //  Version 2023.4 linux_x86_64 Oct  9 2023
+# //
+# //  Copyright 1991-2023 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.top(fast)
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.iicmb_pkg(body)
+# Loading work.iicmb_m_wb(str)#1
+# Loading work.iicmb_int_pkg(body)
+# Loading work.iicmb_m(str)#1
+
+# 15:26:26: Loading design data...
+# 15:26:26: Loaded  design units
+# 15:26:26: Loaded  design hierarchy
+# Warning: The wave file cannot be loaded because either the simulation has not yet logged any data, or qwavedb logging has not been enabled.
+# set IterationLimit 140000
+# 140000
+# set NoQuitOnFinish 1
+# 1
+# coverage attribute -name TESTNAME -value test_top
+
+# coverage save -onexit test_top.ucdb
+
+# do wave.do
+# 15:26:32: Loading waveform header...
+# 15:26:32: Loaded  waveform header
+#   Error: Unable to wave top.NUM_I2C_BUSSES.
+#   Error: Unable to wave top.sda[0].
+# 
+# *****************************************************************
+#    Using QuickLZ compression software.
+# *****************************************************************
+# 
+# Static tasks and functions will be logged.
+# Qwave threading will not be used.
+# 	Arrays of 1 unpacked dimension inside classes will be logged if they have 1024 or fewer elements
+# qwavedb_dumpvars: Initiating qwavedb class logging
+# 
+# 	Loading class filter file '/mnt/apps/public/COE/mg_apps/questa2023.4/questasim/bin/../linux_x86_64/VisualizerRls/bin/../config/uvmclassfilter.txt'
+# 
+# qwavedb_dumpvars: Done initiating qwavedb class logging
+# Mentor Graphics software version 2023.4 (Build number 0)
+# Copyright (C) 1999-2024 by Mentor Graphics All rights reserved.
+# qwavedb_dumpvars: Initiating qwavedb waveform capturing
+# 
+# 	Arrays of 1 unpacked dimension will be logged if they have 1024 or fewer elements
+# QWAVEDB:  logging of additional nested aggregates (UPA of UPS of UPA) is enabled.
+# 
+# qwavedb_dumpvars: Done initiating qwavedb waveform capturing
+# 
+
+# Address is 22 
+# ****************************************** Writing from 0 to 31 ******************************************
+# Write Data is   0 
+# Write Data is   1 
+# Write Data is   2 
+# Write Data is   3 
+# Write Data is   4 
+# Write Data is   5 
+# Write Data is   6 
+# Write Data is   7 
+# Write Data is   8 
+# Write Data is   9 
+# Write Data is  10 
+# Write Data is  11 
+# Write Data is  12 
+# Write Data is  13 
+# Write Data is  14 
+# Write Data is  15 
+# Write Data is  16 
+# Write Data is  17 
+# Write Data is  18 
+# Write Data is  19 
+# Write Data is  20 
+# Write Data is  21 
+# Write Data is  22 
+# Write Data is  23 
+# Write Data is  24 
+# Write Data is  25 
+# Write Data is  26 
+# Write Data is  27 
+# Write Data is  28 
+# Write Data is  29 
+# Write Data is  30 
+# Write Data is  31 
+# Address is 22 
+# ******************************************Reading values from 100 to 131******************************************
+# Read Data is 100 
+# Read Data is 101 
+# Read Data is 102 
+# Read Data is 103 
+# Read Data is 104 
+# Read Data is 105 
+# Read Data is 106 
+# Read Data is 107 
+# Read Data is 108 
+# Read Data is 109 
+# Read Data is 110 
+# Read Data is 111 
+# Read Data is 112 
+# Read Data is 113 
+# Read Data is 114 
+# Read Data is 115 
+# Read Data is 116 
+# Read Data is 117 
+# Read Data is 118 
+# Read Data is 119 
+# Read Data is 120 
+# Read Data is 121 
+# Read Data is 122 
+# Read Data is 123 
+# Read Data is 124 
+# Read Data is 125 
+# Read Data is 126 
+# Read Data is 127 
+# Read Data is 128 
+# Read Data is 129 
+# Read Data is 130 
+# Read Data is 131 
+# ******************************************Alternate Read and Write******************************************
+# Address is 22 
+# Write Data is  64 
+# Address is 22 
+# Read Data is  63 
+# Address is 22 
+# Write Data is  65 
+# Address is 22 
+# Read Data is  62 
+# Address is 22 
+# Write Data is  66 
+# Address is 22 
+# Read Data is  61 
+# Address is 22 
+# Write Data is  67 
+# Address is 22 
+# Read Data is  60 
+# Address is 22 
+# Write Data is  68 
+# Address is 22 
+# Read Data is  59 
+# Address is 22 
+# Write Data is  69 
+# Address is 22 
+# Read Data is  58 
+# Address is 22 
+# Write Data is  70 
+# Address is 22 
+# Read Data is  57 
+# Address is 22 
+# Write Data is  71 
+# Address is 22 
+# Read Data is  56 
+# Address is 22 
+# Write Data is  72 
+# Address is 22 
+# Read Data is  55 
+# Address is 22 
+# Write Data is  73 
+# Address is 22 
+
+# stop -sync -abort
+
+# Read Data is  54 
+# Address is 22 
+# Write Data is  74 
+# Address is 22 
+# Read Data is  53 
+# Starting to log objects in ".top.i2c_bus"
+# Logged 23 objects
+# Flushing waveform data
+# Window layout 'Default' saved in file: /mnt/ncsudrive/s/sreyya/.visualizer/layout.xml
+# Saving coverage database on exit...
+# qwavedb_dumpvars : Simulation ending at [0 2309031000] 0
+# ========= Visualizer Dump Summary report =========
+# 	 #Design Ids       = 157
+# 	 #Assertion Ids    = 3
+# 	 #Message Ids      = 1
+# 	 #Total Ids        = 181
+# 	 #Swaps            = 17
+# 	  Id Memory        = 17.38 KB
+# 	  Swap Memory      = 50.00 MB
+# ========= End of Visualizer Dump Summary report =========
+# End time: 15:33:55 on Mar 23,2024, Elapsed time: 0:07:36
+# Errors: 0, Warnings: 0
+# *** Summary *********************************************
+#     qrun: Errors:   0, Warnings:   0
+#     vsim: Errors:   0, Warnings:   0
+#   Totals: Errors:   0, Warnings:   0
+# Start  : Sat 23 Mar 2024 03:25:54 PM EDT
+# End    : Sat 23 Mar 2024 03:33:55 PM EDT
+# VMSize : 1568508 kB
+# VMPeak : 1683272 kB
+# Licenses released at Sat Mar 23 15:49:48 2024 due to inactivity in session.  They will be reacquired when you resume activity.

@@ -1,0 +1,696 @@
+QuestaSim qrun 2023.4 Utility 2023.10 Oct  9 2023
+Start time: 10:36:26 on Apr 09,2024
+qrun -64 -gui -visualizer -onfinish stop -classdebug -uvmcontrol=all -msgmode both -permit_unmatched_virtual_intf -l run.log -f lab1_filelist.f -sv_seed 123456 -msglimit error -msglimitcount 20 -do "set IterationLimit 140000; set NoQuitOnFinish 1; coverage attribute -name TESTNAME -value test_top; coverage save -onexit test_top.ucdb; do wave.do" -debug,livesim -qwavedb=+signal+memory=1024+report+parameter+class+assertion+uvm_schematic+msg+classmemory=1024+statictaskfunc -top top -covermultiuserenv -designfile design.bin 
+Creating library 'qrun.out/work'.
+QuestaSim-64 vlog 2023.4 Compiler 2023.10 Oct  9 2023
+Start time: 10:36:26 on Apr 09,2024
+vlog -msglimit error -msglimitcount 20 -covermultiuserenv ../../../verification_ip/interface_packages/i2c_pkg/src/i2c_if.sv ../../../verification_ip/interface_packages/wb_pkg/src/wb_if.sv ../../../verification_ip/ncsu_pkg/ncsu_pkg.sv ../../../verification_ip/interface_packages/wb_pkg/wb_pkg.sv ../../../verification_ip/interface_packages/i2c_pkg/i2c_pkg.sv ../../../verification_ip/interface_packages/environment_packages/i2cmb_env_pkg/i2cmb_env_pkg.sv ../testbench/top.sv -work qrun.out/work -statslog qrun.out/stats_log -writesessionid "+qrun.out/top_dus" -csession=incr -csessionid=0 
+-- Compiling interface i2c_if
+-- Compiling interface wb_if
+-- Compiling package ncsu_pkg
+-- Compiling package wb_pkg
+-- Importing package ncsu_pkg
+-- Compiling package ncsu_pkg
+** Warning: ** while parsing file included at ../../../verification_ip/interface_packages/i2c_pkg/i2c_pkg.sv(1)
+** at ../../../verification_ip/interface_packages/i2c_pkg/../ncsu_pkg/ncsu_pkg.sv(1): (vlog-2275) Existing package 'ncsu_pkg' at ../../../verification_ip/ncsu_pkg/ncsu_pkg.sv(1) will be overwritten.
+-- Compiling package i2c_pkg
+-- Compiling package i2cmb_env_pkg
+-- Importing package i2c_pkg
+-- Importing package wb_pkg
+-- Compiling module top
+-- Importing package i2cmb_env_pkg
+
+Top level modules:
+	top
+End time: 10:36:28 on Apr 09,2024, Elapsed time: 0:00:02
+Errors: 0, Warnings: 1
+QuestaSim-64 vcom 2023.4 Compiler 2023.10 Oct  9 2023
+Start time: 10:36:28 on Apr 09,2024
+vcom -msglimit error -msglimitcount 20 -covermultiuserenv ../rtl/iicmb_int_pkg.vhd ../rtl/iicmb_pkg.vhd ../rtl/mbyte.vhd ../rtl/mbit.vhd ../rtl/bus_state.vhd ../rtl/filter.vhd ../rtl/conditioner.vhd ../rtl/conditioner_mux.vhd ../rtl/iicmb_m.vhd ../rtl/regblock.vhd ../rtl/wishbone.vhd ../rtl/iicmb_m_wb.vhd -work qrun.out/work -autoorder -statslog qrun.out/stats_log -writesessionid "+qrun.out/top_dus" -csession=incr -csessionid=1 
+-- Loading package STANDARD
+-- Scanning package iicmb_int_pkg
+-- Scanning package body iicmb_int_pkg
+-- Loading package iicmb_int_pkg
+-- Scanning package iicmb_pkg
+-- Scanning package body iicmb_pkg
+-- Loading package iicmb_pkg
+-- Scanning entity mbyte
+-- Scanning architecture rtl of mbyte
+-- Scanning entity mbit
+-- Scanning architecture rtl of mbit
+-- Scanning entity bus_state
+-- Scanning architecture rtl of bus_state
+-- Scanning entity filter
+-- Scanning architecture rtl of filter
+-- Scanning entity conditioner
+-- Scanning architecture str of conditioner
+-- Scanning entity conditioner_mux
+-- Scanning architecture str of conditioner_mux
+-- Scanning entity iicmb_m
+-- Scanning architecture str of iicmb_m
+-- Scanning entity regblock
+-- Scanning architecture rtl of regblock
+-- Scanning entity wishbone
+-- Scanning architecture rtl of wishbone
+-- Scanning entity iicmb_m_wb
+-- Scanning architecture str of iicmb_m_wb
+End time: 10:36:29 on Apr 09,2024, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
+QuestaSim-64 vcom 2023.4 Compiler 2023.10 Oct  9 2023
+Start time: 10:36:29 on Apr 09,2024
+vcom -refresh_marked -work qrun.out/work -csession=incr -statslog qrun.out/stats_log 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity bus_state
+-- Compiling architecture rtl of bus_state
+-- Compiling entity conditioner
+-- Compiling architecture str of conditioner
+-- Compiling entity conditioner_mux
+-- Compiling architecture str of conditioner_mux
+-- Compiling entity filter
+-- Compiling architecture rtl of filter
+-- Compiling package iicmb_int_pkg
+-- Compiling package body iicmb_int_pkg
+-- Loading package iicmb_int_pkg
+-- Loading package NUMERIC_STD
+-- Loading package iicmb_pkg
+-- Loading package iicmb_int_pkg
+-- Compiling entity iicmb_m
+-- Compiling architecture str of iicmb_m
+-- Compiling entity iicmb_m_wb
+-- Compiling architecture str of iicmb_m_wb
+-- Compiling package iicmb_pkg
+-- Compiling package body iicmb_pkg
+-- Loading package iicmb_pkg
+-- Compiling entity mbit
+-- Compiling architecture rtl of mbit
+-- Loading package iicmb_pkg
+-- Compiling entity mbyte
+-- Compiling architecture rtl of mbyte
+-- Compiling entity regblock
+-- Compiling architecture rtl of regblock
+-- Compiling entity wishbone
+-- Compiling architecture rtl of wishbone
+End time: 10:36:30 on Apr 09,2024, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
+QuestaSim-64 vopt 2023.4 Compiler 2023.10 Oct  9 2023
+Start time: 10:36:31 on Apr 09,2024
+vopt -msglimit error -msglimitcount 20 -debug,livesim -designfile design.bin top -work qrun.out/work -statslog qrun.out/stats_log -o qrun_opt -csession=incr -csessionid=2 
+
+Top level modules:
+	top
+
+Analyzing design...
+-- Loading module top
+-- Importing package ncsu_pkg
+-- Importing package wb_pkg
+-- Importing package i2c_pkg
+-- Importing package i2cmb_env_pkg
+-- Loading interface wb_if
+-- Loading interface i2c_if
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading entity iicmb_m_wb
+-- Loading architecture str of iicmb_m_wb
+-- Loading entity wishbone
+-- Loading package NUMERIC_STD
+-- Loading package iicmb_pkg
+-- Loading entity regblock
+-- Loading package iicmb_int_pkg
+-- Loading entity iicmb_m
+-- Loading architecture rtl of wishbone
+-- Loading architecture rtl of regblock
+-- Loading package body iicmb_pkg
+-- Loading architecture str of iicmb_m
+-- Loading entity mbyte
+-- Loading entity mbit
+-- Loading entity conditioner_mux
+-- Loading package body iicmb_int_pkg
+-- Loading architecture rtl of mbyte
+-- Loading architecture rtl of mbit
+-- Loading architecture str of conditioner_mux
+-- Loading entity conditioner
+-- Loading architecture str of conditioner
+-- Loading entity filter
+-- Loading entity bus_state
+-- Loading architecture rtl of filter
+-- Loading architecture rtl of bus_state
+Optimizing 23 design-units (inlining 2/3 module instances, 9/11 architecture instances):
+-- Optimizing package ncsu_pkg(fast)
+-- Optimizing package wb_pkg(fast)
+-- Optimizing package i2c_pkg(fast)
+-- Optimizing package i2cmb_env_pkg(fast)
+-- Inlining interface wb_if(fast__2)
+-- Inlining interface i2c_if(fast__2)
+-- Optimizing module top(fast)
+-- Optimizing interface i2c_if(fast)
+-- Optimizing interface wb_if(fast)
+-- Inlining architecture rtl of mbyte
+-- Inlining architecture rtl of mbit
+-- Inlining architecture rtl of filter
+-- Inlining architecture rtl of bus_state
+-- Inlining architecture str of conditioner
+-- Inlining architecture str of conditioner_mux
+-- Optimizing architecture str of iicmb_m
+-- Inlining architecture rtl of wishbone
+-- Inlining architecture rtl of regblock
+-- Optimizing architecture str of iicmb_m_wb
+-- Optimizing package iicmb_pkg
+-- Optimizing package body iicmb_pkg
+-- Optimizing package iicmb_int_pkg
+-- Optimizing package body iicmb_int_pkg
+viscom:
+VISCOM: Start time: 10:36:33 on Apr 09,2024
+
+VISCOM: QuestaSim /mnt/apps/public/COE/mg_apps/questa2023.4/questasim/linux/../linux_x86_64/VisualizerRls/bin/viscom 2023.4 at 2023.10 Oct  9 2023
+VISCOM: Writing design.bin
+VISCOM: Done writing design.bin
+VISCOM: End time: 10:36:34 on Apr 09,2024, Elapsed time: 0:00:01 (Process Size : 380MB, Peak Process Size : 381MB)
+
+
+Optimized design name is qrun_opt
+End time: 10:36:35 on Apr 09,2024, Elapsed time: 0:00:04
+Errors: 0, Warnings: 0
+# VISUALIZERROOT = '/mnt/apps/public/COE/mg_apps/questa2023.4/questasim/linux_x86_64/VisualizerRls'
+# USER = 'sreyya'
+# Mentor Graphics software version 2023.4 (Build on Oct  9 2023)
+# Copyright (C) 1999-2024 by Mentor Graphics All rights reserved.
+
+# vsim -64 -onfinish stop -classdebug -uvmcontrol=all -msgmode both -permit_unmatched_virtual_intf -sv_seed 123456 -msglimit error -msglimitcount 20 -qwavedb=+signal+memory=1024+report+parameter+class+assertion+uvm_schematic+msg+classmemory=1024+statictaskfunc -lib qrun.out/work -visualizer=design.bin -do {set IterationLimit 140000; set NoQuitOnFinish 1; coverage attribute -name TESTNAME -value test_top; coverage save -onexit test_top.ucdb; do wave.do} -statslog qrun.out/stats_log qrun_opt -appendlog -l run.log -csession=incr -csessionid=3
+# vsim -64 -onfinish stop -classdebug -uvmcontrol=all -msgmode both -permit_unmatched_virtual_intf -sv_seed 123456 -msglimit error -msglimitcount 20 -qwavedb=+livesim+signal+memory=1024+report+parameter+class+assertion+uvm_schematic+msg+classmemory=1024+statictaskfunc -lib qrun.out/work -visualizer=design.bin -statslog qrun.out/stats_log qrun_opt -appendlog -csession=incr -csessionid=3 "+no_qwavedb_threading" 
+# Start time: 10:36:58 on Apr 09,2024
+# Loading Mentor Graphics Visualizer shared object '/mnt/apps/public/COE/mg_apps/questa2023.4/questasim/bin/../linux_x86_64/VisualizerRls/bin/libqvisualizer.so'
+
+# Initiating qwavedb class logging
+
+
+# Done initiating qwavedb class logging
+# //  Questa Sim-64
+# //  Version 2023.4 linux_x86_64 Oct  9 2023
+# //
+# //  Copyright 1991-2023 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.wb_if(fast)
+# Loading work.i2c_if(fast)
+# Loading work.ncsu_pkg(fast)
+# Loading work.wb_pkg(fast)
+# Loading work.i2c_pkg(fast)
+# Loading work.i2cmb_env_pkg(fast)
+# Loading work.top(fast)
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.iicmb_pkg(body)
+# Loading work.iicmb_m_wb(str)#1
+# Loading work.iicmb_int_pkg(body)
+# Loading work.iicmb_m(str)#1
+
+# 10:37:03: Loading design data...
+# 10:37:03: Loaded  design units
+# 10:37:03: Loaded  design hierarchy
+# set IterationLimit 140000
+# 140000
+# set NoQuitOnFinish 1
+# 1
+# coverage attribute -name TESTNAME -value test_top
+
+# coverage save -onexit test_top.ucdb
+
+# do wave.do
+# 10:37:07: Loading waveform header...
+# 10:37:07: Loaded  waveform header
+#   Error: Unable to wave top.NUM_I2C_BUSSES.
+#   Error: Unable to wave top.sda[0].
+# 
+# *****************************************************************
+#    Using QuickLZ compression software.
+# *****************************************************************
+# 
+# Static tasks and functions will be logged.
+# Qwave threading will not be used.
+# 	Arrays of 1 unpacked dimension inside classes will be logged if they have 1024 or fewer elements
+# qwavedb_dumpvars: Initiating qwavedb class logging
+# 
+# 	Loading class filter file '/mnt/apps/public/COE/mg_apps/questa2023.4/questasim/bin/../linux_x86_64/VisualizerRls/bin/../config/uvmclassfilter.txt'
+# 
+# qwavedb_dumpvars: Done initiating qwavedb class logging
+# Mentor Graphics software version 2023.4 (Build number 0)
+# Copyright (C) 1999-2024 by Mentor Graphics All rights reserved.
+# 	 Class Filter File used = /mnt/apps/public/COE/mg_apps/questa2023.4/questasim/bin/../linux_x86_64/VisualizerRls/bin/../config/uvmclassfilter.txt
+# qwavedb_dumpvars: Initiating qwavedb waveform capturing
+# 
+# 	Arrays of 1 unpacked dimension will be logged if they have 1024 or fewer elements
+# QWAVEDB:  logging of additional nested aggregates (UPA of UPS of UPA) is enabled.
+# 
+# qwavedb_dumpvars: Done initiating qwavedb waveform capturing
+# 
+
+# ----------------------------------------------------------------
+# //  NCSU Package 
+# //  Version 1.0a
+# ----------------------------------------------------------------
+# 
+# 
+# NCSU_INFO:Time                    0:ncsu_component::build():  of tst.env.agent_wb.driver called
+# NCSU_INFO:Time                    0:ncsu_component::build():  of tst.env.agent_wb.monitor called
+# NCSU_INFO:Time                    0:ncsu_component::build():  of tst.env.agent_i2c.driver called
+# NCSU_INFO:Time                    0:ncsu_component::build():  of tst.env.agent_i2c.monitor called
+# NCSU_INFO:Time                    0:ncsu_component::build():  of tst.env.pred called
+# NCSU_INFO:Time                    0:ncsu_component::build():  of tst.env.scbd called
+# ****************************************** Writing from 0 to 31 ******************************************
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{31, 30, 29, 28, 27, 26, 25, 24, 23, 22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0} op:0x0
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 4 address:0x22 data:0x'{31, 30, 29, 28, 27, 26, 25, 24, 23, 22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0} op:0x0
+# tst.env.scbd i2c_transaction MATCH!
+# ******************************************Reading values from 100 to 131******************************************
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{131, 130, 129, 128, 127, 126, 125, 124, 123, 122, 121, 120, 119, 118, 117, 116, 115, 114, 113, 112, 111, 110, 109, 108, 107, 106, 105, 104, 103, 102, 101, 100} op:0x1
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 100043 address:0x22 data:0x'{131, 130, 129, 128, 127, 126, 125, 124, 123, 122, 121, 120, 119, 118, 117, 116, 115, 114, 113, 112, 111, 110, 109, 108, 107, 106, 105, 104, 103, 102, 101, 100} op:0x1
+# tst.env.scbd i2c_transaction MATCH!
+# ******************************************Alternate Read and Write******************************************
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{64} op:0x0
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 199391 address:0x22 data:0x'{64} op:0x0
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{63} op:0x1
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 206454 address:0x22 data:0x'{63} op:0x1
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{65} op:0x0
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 212523 address:0x22 data:0x'{65} op:0x0
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{62} op:0x1
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 219476 address:0x22 data:0x'{62} op:0x1
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{66} op:0x0
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 225545 address:0x22 data:0x'{66} op:0x0
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{61} op:0x1
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 232498 address:0x22 data:0x'{61} op:0x1
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{67} op:0x0
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 238567 address:0x22 data:0x'{67} op:0x0
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{60} op:0x1
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 245520 address:0x22 data:0x'{60} op:0x1
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{68} op:0x0
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 251589 address:0x22 data:0x'{68} op:0x0
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{59} op:0x1
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 258542 address:0x22 data:0x'{59} op:0x1
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{69} op:0x0
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 264611 address:0x22 data:0x'{69} op:0x0
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{58} op:0x1
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 271564 address:0x22 data:0x'{58} op:0x1
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{70} op:0x0
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 277633 address:0x22 data:0x'{70} op:0x0
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{57} op:0x1
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 284586 address:0x22 data:0x'{57} op:0x1
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{71} op:0x0
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 290655 address:0x22 data:0x'{71} op:0x0
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{56} op:0x1
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 297608 address:0x22 data:0x'{56} op:0x1
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{72} op:0x0
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 303677 address:0x22 data:0x'{72} op:0x0
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{55} op:0x1
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 310630 address:0x22 data:0x'{55} op:0x1
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{73} op:0x0
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 316699 address:0x22 data:0x'{73} op:0x0
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{54} op:0x1
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 323652 address:0x22 data:0x'{54} op:0x1
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{74} op:0x0
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 329721 address:0x22 data:0x'{74} op:0x0
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{53} op:0x1
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 336674 address:0x22 data:0x'{53} op:0x1
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{75} op:0x0
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 342743 address:0x22 data:0x'{75} op:0x0
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{52} op:0x1
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 349696 address:0x22 data:0x'{52} op:0x1
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{76} op:0x0
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 355765 address:0x22 data:0x'{76} op:0x0
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{51} op:0x1
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 362718 address:0x22 data:0x'{51} op:0x1
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{77} op:0x0
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 368787 address:0x22 data:0x'{77} op:0x0
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{50} op:0x1
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 375740 address:0x22 data:0x'{50} op:0x1
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{78} op:0x0
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 381809 address:0x22 data:0x'{78} op:0x0
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{49} op:0x1
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 388762 address:0x22 data:0x'{49} op:0x1
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{79} op:0x0
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 394831 address:0x22 data:0x'{79} op:0x0
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{48} op:0x1
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 401784 address:0x22 data:0x'{48} op:0x1
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{80} op:0x0
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 407853 address:0x22 data:0x'{80} op:0x0
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{47} op:0x1
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 414806 address:0x22 data:0x'{47} op:0x1
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{81} op:0x0
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 420875 address:0x22 data:0x'{81} op:0x0
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{46} op:0x1
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 427828 address:0x22 data:0x'{46} op:0x1
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{82} op:0x0
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 433897 address:0x22 data:0x'{82} op:0x0
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{45} op:0x1
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 440850 address:0x22 data:0x'{45} op:0x1
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{83} op:0x0
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 446919 address:0x22 data:0x'{83} op:0x0
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{44} op:0x1
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 453872 address:0x22 data:0x'{44} op:0x1
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{84} op:0x0
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 459941 address:0x22 data:0x'{84} op:0x0
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{43} op:0x1
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 466894 address:0x22 data:0x'{43} op:0x1
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{85} op:0x0
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 472963 address:0x22 data:0x'{85} op:0x0
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{42} op:0x1
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 479916 address:0x22 data:0x'{42} op:0x1
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{86} op:0x0
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 485985 address:0x22 data:0x'{86} op:0x0
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{41} op:0x1
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 492938 address:0x22 data:0x'{41} op:0x1
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{87} op:0x0
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 499007 address:0x22 data:0x'{87} op:0x0
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{40} op:0x1
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 505960 address:0x22 data:0x'{40} op:0x1
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{88} op:0x0
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 512029 address:0x22 data:0x'{88} op:0x0
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{39} op:0x1
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 518982 address:0x22 data:0x'{39} op:0x1
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{89} op:0x0
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 525051 address:0x22 data:0x'{89} op:0x0
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{38} op:0x1
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 532004 address:0x22 data:0x'{38} op:0x1
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{90} op:0x0
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 538073 address:0x22 data:0x'{90} op:0x0
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{37} op:0x1
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 545026 address:0x22 data:0x'{37} op:0x1
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{91} op:0x0
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 551095 address:0x22 data:0x'{91} op:0x0
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{36} op:0x1
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 558048 address:0x22 data:0x'{36} op:0x1
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{92} op:0x0
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 564117 address:0x22 data:0x'{92} op:0x0
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{35} op:0x1
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 571070 address:0x22 data:0x'{35} op:0x1
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{93} op:0x0
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 577139 address:0x22 data:0x'{93} op:0x0
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{34} op:0x1
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 584092 address:0x22 data:0x'{34} op:0x1
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{94} op:0x0
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 590161 address:0x22 data:0x'{94} op:0x0
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{33} op:0x1
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 597114 address:0x22 data:0x'{33} op:0x1
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{95} op:0x0
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 603183 address:0x22 data:0x'{95} op:0x0
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{32} op:0x1
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 610136 address:0x22 data:0x'{32} op:0x1
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{96} op:0x0
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 616205 address:0x22 data:0x'{96} op:0x0
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{31} op:0x1
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 623158 address:0x22 data:0x'{31} op:0x1
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{97} op:0x0
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 629227 address:0x22 data:0x'{97} op:0x0
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{30} op:0x1
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 636180 address:0x22 data:0x'{30} op:0x1
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{98} op:0x0
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 642249 address:0x22 data:0x'{98} op:0x0
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{29} op:0x1
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 649202 address:0x22 data:0x'{29} op:0x1
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{99} op:0x0
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 655271 address:0x22 data:0x'{99} op:0x0
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{28} op:0x1
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 662224 address:0x22 data:0x'{28} op:0x1
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{100} op:0x0
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 668293 address:0x22 data:0x'{100} op:0x0
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{27} op:0x1
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 675246 address:0x22 data:0x'{27} op:0x1
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{101} op:0x0
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 681315 address:0x22 data:0x'{101} op:0x0
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{26} op:0x1
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 688268 address:0x22 data:0x'{26} op:0x1
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{102} op:0x0
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 694337 address:0x22 data:0x'{102} op:0x0
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{25} op:0x1
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 701290 address:0x22 data:0x'{25} op:0x1
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{103} op:0x0
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 707359 address:0x22 data:0x'{103} op:0x0
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{24} op:0x1
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 714312 address:0x22 data:0x'{24} op:0x1
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{104} op:0x0
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 720381 address:0x22 data:0x'{104} op:0x0
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{23} op:0x1
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 727334 address:0x22 data:0x'{23} op:0x1
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{105} op:0x0
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 733403 address:0x22 data:0x'{105} op:0x0
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{22} op:0x1
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 740356 address:0x22 data:0x'{22} op:0x1
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{106} op:0x0
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 746425 address:0x22 data:0x'{106} op:0x0
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{21} op:0x1
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 753378 address:0x22 data:0x'{21} op:0x1
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{107} op:0x0
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 759447 address:0x22 data:0x'{107} op:0x0
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{20} op:0x1
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 766400 address:0x22 data:0x'{20} op:0x1
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{108} op:0x0
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 772469 address:0x22 data:0x'{108} op:0x0
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{19} op:0x1
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 779422 address:0x22 data:0x'{19} op:0x1
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{109} op:0x0
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 785491 address:0x22 data:0x'{109} op:0x0
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{18} op:0x1
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 792444 address:0x22 data:0x'{18} op:0x1
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{110} op:0x0
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 798513 address:0x22 data:0x'{110} op:0x0
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{17} op:0x1
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 805466 address:0x22 data:0x'{17} op:0x1
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{111} op:0x0
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 811535 address:0x22 data:0x'{111} op:0x0
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{16} op:0x1
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 818488 address:0x22 data:0x'{16} op:0x1
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{112} op:0x0
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 824557 address:0x22 data:0x'{112} op:0x0
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{15} op:0x1
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 831510 address:0x22 data:0x'{15} op:0x1
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{113} op:0x0
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 837579 address:0x22 data:0x'{113} op:0x0
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{14} op:0x1
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 844532 address:0x22 data:0x'{14} op:0x1
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{114} op:0x0
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 850601 address:0x22 data:0x'{114} op:0x0
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{13} op:0x1
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 857554 address:0x22 data:0x'{13} op:0x1
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{115} op:0x0
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 863623 address:0x22 data:0x'{115} op:0x0
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{12} op:0x1
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 870576 address:0x22 data:0x'{12} op:0x1
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{116} op:0x0
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 876645 address:0x22 data:0x'{116} op:0x0
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{11} op:0x1
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 883598 address:0x22 data:0x'{11} op:0x1
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{117} op:0x0
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 889667 address:0x22 data:0x'{117} op:0x0
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{10} op:0x1
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 896620 address:0x22 data:0x'{10} op:0x1
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{118} op:0x0
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 902689 address:0x22 data:0x'{118} op:0x0
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{9} op:0x1
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 909642 address:0x22 data:0x'{9} op:0x1
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{119} op:0x0
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 915711 address:0x22 data:0x'{119} op:0x0
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{8} op:0x1
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 922664 address:0x22 data:0x'{8} op:0x1
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{120} op:0x0
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 928733 address:0x22 data:0x'{120} op:0x0
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{7} op:0x1
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 935686 address:0x22 data:0x'{7} op:0x1
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{121} op:0x0
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 941755 address:0x22 data:0x'{121} op:0x0
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{6} op:0x1
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 948708 address:0x22 data:0x'{6} op:0x1
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{122} op:0x0
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 954777 address:0x22 data:0x'{122} op:0x0
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{5} op:0x1
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 961730 address:0x22 data:0x'{5} op:0x1
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{123} op:0x0
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 967799 address:0x22 data:0x'{123} op:0x0
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{4} op:0x1
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 974752 address:0x22 data:0x'{4} op:0x1
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{124} op:0x0
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 980821 address:0x22 data:0x'{124} op:0x0
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{3} op:0x1
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 987774 address:0x22 data:0x'{3} op:0x1
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{125} op:0x0
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 993843 address:0x22 data:0x'{125} op:0x0
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{2} op:0x1
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 1000796 address:0x22 data:0x'{2} op:0x1
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{126} op:0x0
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 1006865 address:0x22 data:0x'{126} op:0x0
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{1} op:0x1
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 1013818 address:0x22 data:0x'{1} op:0x1
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{127} op:0x0
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 1019887 address:0x22 data:0x'{127} op:0x0
+# tst.env.scbd i2c_transaction MATCH!
+# tst.env.scbd nb_transport: Expected transaction name: i2c_transaction transaction_count: 1 address:0x22 data:0x'{0} op:0x1
+# tst.env.scbd nb_put: Actual transaction name: monitored_trans transaction_count: 1026840 address:0x22 data:0x'{0} op:0x1
+# tst.env.scbd i2c_transaction MATCH!
+# ***************************** Simulation Finished *****************************
+# ** Note: $finish    : ../testbench/top.sv(110)
+#    Time: 61995730 ns  Iteration: 0  Instance: .top
+# Stopped at ../testbench/top.sv line 110
+# Break in Module top at ../testbench/top.sv line 110
+# Window layout 'Default' saved in file: /mnt/ncsudrive/s/sreyya/.visualizer/layout.xml
+# Saving coverage database on exit...
+# qwavedb_dumpvars : Simulation ending at [1 1904605704] 0
+# ========= Visualizer Dump Summary report =========
+# 	 #Design Ids       = 165
+# 	 #Assertion Ids    = 3
+# 	 #Class Ids        = 343 (Recycled = 0)
+# 	 #Message Ids      = 2
+# 	 #Total Ids        = 518
+# 	 #Swaps            = 49
+# 	  Id Memory        = 49.73 KB
+# 	  Swap Memory      = 50.00 MB
+# ========= End of Visualizer Dump Summary report =========
+# End time: 11:10:33 on Apr 09,2024, Elapsed time: 0:33:35
+# Errors: 0, Warnings: 0
+# *** Summary *********************************************
+#     qrun: Errors:   0, Warnings:   0
+#     vcom: Errors:   0, Warnings:   0
+#     vlog: Errors:   0, Warnings:   1
+#     vopt: Errors:   0, Warnings:   0
+#     vsim: Errors:   0, Warnings:   0
+#   Totals: Errors:   0, Warnings:   1
+# Start  : Tue 09 Apr 2024 10:36:40 AM EDT
+# End    : Tue 09 Apr 2024 11:10:33 AM EDT
+# VMSize : 1463064 kB
+# VMPeak : 1509764 kB

@@ -1,0 +1,10 @@
+# Current time Mon Apr 22 17:03:25 2024
+# Program = vish
+# Id = "2023.4"
+# Version = "2023.10"
+# Date = "Oct  9 2023"
+# Platform = "linux"
+# 0    0x0857ece6: 'Tcl_GetCommandFullName + 0x26' in '/mnt/apps/public/COE/mg_apps/questa2023.4/questasim/linux/vish'
+# 1    0xfffffffb: '<unknown (@0xfffffffb)>'
+# End of Stack Trace
+

@@ -1,3 +1,0 @@
-** Error (suppressible): ../../../verification_ip/interface_packages/environment_packages/i2cmb_env_pkg/src/i2cmb_test.svh(16): (vopt-13401) Arg. 'agent_wb' of 'set_agent_wb':  Illegal assignment to type 'class wb_pkg::wb_agent' from type 'class ncsu_pkg::ncsu_component': Types are not assignment compatible. This assignment will always fail during simulation.
-** Error (suppressible): ../../../verification_ip/interface_packages/environment_packages/i2cmb_env_pkg/src/i2cmb_test.svh(17): (vopt-13401) Arg. 'agent_i2c' of 'set_agent_i2c':  Illegal assignment to type 'class i2c_pkg::i2c_agent' from type 'class ncsu_pkg::ncsu_component': Types are not assignment compatible. This assignment will always fail during simulation.
-Optimization failed
